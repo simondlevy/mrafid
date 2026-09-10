@@ -6,6 +6,7 @@ File: layoutdemo.py
 """
 
 from breezypythongui import EasyFrame
+from tkinter.font import Font
 
 class LayoutDemo(EasyFrame):
     """Displays labels in the window's quadrants."""
@@ -13,10 +14,13 @@ class LayoutDemo(EasyFrame):
     def __init__(self):
         """Sets up the window and the labels."""
         EasyFrame.__init__(self)
-        self.addLabel("(0, 0)", 0, 0, sticky = "NSEW")
-        self.addLabel("(0, 1)", 0, 1, sticky = "NSEW")
-        self.addLabel("(1, 0)", 1, 0, sticky = "NSEW")
-        self.addLabel("(1, 1)", 1, 1, sticky = "NSEW")
+        for rw in range(0, 2):
+            for cl in range(0, 1):
+                label = self.addLabel(text=f"({str(rw)}, {str(cl)})", row=rw, column=cl, sticky="NSEW")
+                font = Font(family="Verdana", size=24, weight="bold")
+                label["font"] = font
+                label["foreground"] = "red"
+
 
 
 def main():

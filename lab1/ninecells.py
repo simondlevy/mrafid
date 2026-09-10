@@ -16,7 +16,7 @@ class LayoutDemo(EasyFrame):
         EasyFrame.__init__(self)
         for rw in range(0, 3):
             for cl in range(0, 3):
-                label = self.addLabel(text = f"{str(rw)}, {str(cl)}", row = rw, column = cl, sticky = "NSEW")
+                label = self.addLabel(text = f"({str(rw)}, {str(cl)})", row = rw, column = cl, sticky = "NSEW")
                 font = Font(family="Verdana", size=24, weight="bold")
                 label["font"] = font
                 label["foreground"] = "red"
