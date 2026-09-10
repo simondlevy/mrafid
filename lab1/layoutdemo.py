@@ -15,7 +15,7 @@ class LayoutDemo(EasyFrame):
         """Sets up the window and the labels."""
         EasyFrame.__init__(self)
         for rw in range(0, 2):
-            for cl in range(0, 1):
+            for cl in range(0, 2):
                 label = self.addLabel(text=f"({str(rw)}, {str(cl)})", row=rw, column=cl, sticky="NSEW")
                 font = Font(family="Verdana", size=24, weight="bold")
                 label["font"] = font
