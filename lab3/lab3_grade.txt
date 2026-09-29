@@ -1,0 +1,2 @@
+90% Good overall, but it would have made sense report time in seconds for Fibonacci as well.
+
